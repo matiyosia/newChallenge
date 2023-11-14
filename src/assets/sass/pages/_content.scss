@@ -1,0 +1,98 @@
+.content{
+    width: 100%;
+    min-width: 400px;
+    .v-theme--light, .v-card--density-default{
+        border: none !important;
+    }
+    .v-card-text{
+        background-color: $gray-50;
+    }
+    .v-slide-group__container{
+        background-color: $gray-50;
+    }
+    .v-tab__slider{
+        border-bottom: 3px solid #7367F0;
+    }
+    .v-slide-group-item--active{
+        color: $gray-200;
+        }
+         .v-card{
+            border: none !important;
+        }
+    &-tabs{
+        color: $gray-100;
+        border: none !important;
+        @include font-size(18,21,700);
+        text-transform: capitalize !important;
+    }
+
+    
+    
+}
+#border{
+    .v-slide-group__content{
+        border-bottom: 3px solid #DDDDDD !important;
+    }
+}
+
+.content-card{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.content-card-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.age-days {
+    display: flex;
+    flex-direction: column;
+
+    h2{
+        color: $gray-100;
+        @include font-size(14,17,700);
+    }
+    p{
+        color: $gray-100;
+        @include font-size(18,21,700);
+    }
+}
+
+.content-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    border-top: 3px solid $gray-100;
+} 
+
+.created, .createDate {
+    color: $gray-100;
+    @include font-size(14,17,700);
+    padding-top: 10px;
+}
+
+
+.border-tabs{
+    border-bottom: 1px solid $gray-100;
+}
+.subPanels{
+    .v-card-text{
+        background-color: $white;
+    }
+    .v-slide-group__container{
+        background-color: $gray-50;
+    }
+    .v-slide-group-item--active{
+    background: $white !important;
+    }
+    .v-tab__slider{
+        display: none !important;
+    }
+    .v-btn{
+        border-radius: 6px 6px !important;
+    }
+   
+}

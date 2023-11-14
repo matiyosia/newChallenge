@@ -1,0 +1,31 @@
+// Colors
+$white: hsl(0, 0%, 100%);
+$black: hsla(0, 0%, 0%, 0.85);
+$black-45: hsla(0, 0%, 0%, 0.45);
+$black-100: hsla(0, 0%, 0%, 1);
+$primary: rgb(68, 54, 253);
+$info: hsla(215, 80%, 60%, 1);
+$success: hsla(100, 77%, 44%, 1);
+$danger: hsla(359, 100%, 65%, 1);
+$violet:#7367F0;
+
+$bg-color: hsla(222, 83%, 98%, 1);
+$bg-avatar: hsl(26, 92%, 90%);
+$color-avatar: hsl(26, 100%, 48%);
+$dark-blue: hsla(230, 53%, 23%, 1);
+$pale-blue: hsl(223, 39%, 91%);
+
+$gray-100: hsla(0, 0%, 93%, 1);
+$gray: rgb(110, 107, 123);
+$gray-50: #F8F8F8;
+$gray-100: #888888;
+$gray-200: #6E6B7B;
+
+
+
+// Breakpoints
+$screen-xs-min: 576; // Small tablets and large smartphones (landscape view)
+$screen-sm-min: 768; // Small tablets and large smartphones (landscape view)
+$screen-md-min: 992; // Small tablets (portrait view)
+$screen-lg-min: 1024; // Tablets and small desktops
+$screen-xl-min: 1200; // Large tablets and desktops

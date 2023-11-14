@@ -1,0 +1,103 @@
+.activity{
+    .v-input__control{
+        height: 50px !important;
+    }
+    margin-bottom: 40px;
+    &-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        p{
+            color: $gray;
+            @include font-size(18,20,500);
+        }
+    }
+    &-select{
+        display: flex;
+        gap: 10px; 
+    }
+}
+.timeline-p{
+    color: $gray;
+    @include font-size(14,20,700);
+}
+.none{
+    display: none;
+}
+
+.v-input__control{
+border: 10 solid $gray !important;
+padding: 3px;
+}
+
+.details{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    margin-top: 10px;
+    h2{
+        color: $violet;
+        @include font-size(14,17,700);
+    }
+}
+
+.tbasTineline{
+    .v-slide-group-item--active{
+        color: $gray-200;
+        }
+    color:  #6E6B7B;
+    background-color: $gray-50;
+    @include font-size(16,21,700);
+    box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.1);
+}
+
+.border-none-tabs {
+    border: none;
+  }
+
+  .timelineContainer{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-left: -25px;
+    overflow-y: scroll;
+    height: 400px;
+  }
+  .timeline-title{
+    color: $violet;
+    @include font-size(12,21,700);
+  }
+
+  .date{
+    display: flex;
+    justify-content: space-between;
+    color: $gray;
+    @include font-size(12,21,700);
+    &-p{
+        color: $gray;
+    }
+    &-p-text{
+        @include font-size(12,21,700);
+        color: $gray;
+    }
+  }
+
+  .v-icon--size-x-small {
+    width: 3px !important;
+  }
+
+  .v-timeline--vertical.v-timeline{
+    row-gap: 9px !important;
+  }
+
+
+
+.v-timeline > .v-timeline-item:first-child .v-timeline-divider__before {
+    display: none;
+}
+
+.v-card-text{
+    border: none !important;
+    border-radius: none !important;
+}

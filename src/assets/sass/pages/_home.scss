@@ -1,0 +1,138 @@
+.home{
+    display: flex;
+    gap: 20px;
+   
+    &-panel{
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: 730px;
+        margin-left: 3px;
+        
+    }
+    &-content{
+      width: 1200px;
+      min-width: 1024px;
+    }
+    &-card{
+        display: flex;
+        margin: 10px;
+        align-items: stretch;
+        gap: 1rem;
+        padding: 15px ;
+
+        h2{
+            @include font-size(16,22,600);
+            color: $primary;
+            min-width: 360px;
+        }
+        p{
+            @include font-size(16,25,700);
+            color: $gray;
+        }
+        img{
+            width: 65px;
+        }
+    }
+}
+
+.colapse{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+
+    &-list{
+        li{
+          @include font-size(12,30,700);
+          color: $gray-100;
+        }
+    }
+    &-title{
+        @include font-size(15,22,600);
+        color: $gray;
+    }
+    &-email{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        span{
+            cursor: pointer;
+        }
+    }
+}
+
+.icons-users{
+  display: flex;
+  justify-content: flex-end;
+  gap: 36px;
+  margin-right: 20px;
+}
+
+.icon-user{
+    display: flex;
+    padding: 10px;
+    gap: 15px;
+    &-flex{
+      display: flex;
+      flex-direction: column;
+    }
+    &-h4{
+      color: $white;
+      @include font-size(14,25,700);
+    }
+    &-p{
+      display: flex;
+      color: $white;
+      flex-direction: row-reverse;
+      @include font-size(14,17,700);
+    }
+}
+
+.footer{
+  @include font-size(14,21,700);
+  color: $gray-100;
+}
+
+.v-expansion-panel-title__overlay{
+  background-color: $white !important;
+}
+
+.sider {
+    width: 50px;
+    transition: width 0.3s; 
+  }
+  
+  .sider-expanded {
+    width: 300px; 
+  }
+  
+  @media (max-width: #{$screen-sm-min}px) {
+    .sider {
+      width: 100% !important;
+    }
+  
+    .sider-expanded {
+      width: 100%; 
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  .cardRegId{
+    display: flex;
+
+  }
+  @media (min-width: #{$screen-md-min}px) and (max-width: #{$screen-lg-min}px) {
+    .sider {
+      width: 100%; 
+    }
+  
+    .sider-expanded {
+      width: 100%; 
+    }
+  }
+.flexbox{
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
