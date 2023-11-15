@@ -108,6 +108,7 @@
                     <v-select
                     label="Seleciona una opcion"
                     :items="['Software Developer', 'Testing']"
+                    variant="solo"
                     ></v-select>
                 </li>
                 <li>Carrera ID: </li>
