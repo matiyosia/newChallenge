@@ -2,12 +2,12 @@
 
     <v-tabs v-model="tab" style="border: none;" class="tabs-with-shadow">
       <v-tab class="tab-with-icon" style="border-radius: 8px; text-transform: capitalize !important;" value="one"> Activity</v-tab>
-      <v-tab class="tab-with-icon" style="border-radius: 8px; text-transform: capitalize !important;" :disabled="emailDisabled" @click="activateTab('two')">
+      <v-tab class="tab-with-icon" style="border-radius: 8px; text-transform: capitalize !important;" >
         <span class="icon-text-wrapper">
           <img class="tab-icon" src="@/assets/image/email.svg" alt=""> Email
         </span>
       </v-tab>
-      <v-tab class="tab-with-icon" style="border-radius: 8px; text-transform: capitalize !important;" :disabled="callsDisabled" @click="activateTab('three')">
+      <v-tab class="tab-with-icon" style="border-radius: 8px; text-transform: capitalize !important;" >
         <span class="icon-text-wrapper">
           <img class="tab-icon" src="@/assets/image/phone.svg" alt=""> Calls
         </span>
@@ -66,6 +66,7 @@ export default {
   align-items: center;
   font-size: 16px; 
   font-weight: 700;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .icon-text-wrapper {
@@ -73,11 +74,14 @@ export default {
   align-items: center;
   gap: 5px;
   text-transform: capitalize !important;
+  color: rgb(110, 107, 123);
+  opacity: 0.4;
 }
 
 .tab-icon {
   color: #6E6B7B;
   margin-right: 5px;
+ 
  
 }
 </style>

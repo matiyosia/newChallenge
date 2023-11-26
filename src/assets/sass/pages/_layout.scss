@@ -3,3 +3,37 @@
     padding: 20px 15px;
 }
 
+.in-line{
+    position: absolute;
+    font-size: 124px;
+    color: #28C76F;
+    z-index: 99;
+    bottom: -38px;
+    right: 10px;
+}
+
+#siderLayaput{
+    .v-list-item--active{
+        background-color: $primary !important;
+        color: $white !important;
+    }
+}
+
+.active {
+    cursor: pointer;
+    .v-list-item-title{
+        background-color: $violet !important;
+    }
+  }
+
+  .active:hover{
+    background: $gray-50 !important;
+  }
+  
+  .active:active {
+    background-color: $primary !important;
+    color: white !important;
+  }
+  .activeIcon:active {
+    color: white !important;
+  }

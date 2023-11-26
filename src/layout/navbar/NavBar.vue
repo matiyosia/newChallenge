@@ -1,8 +1,9 @@
 <template>
-    <v-app-bar style="background: #4436FD;" name="app-bar">
+    <v-app-bar style="background: #4436FD;" name="app-bar" id="nav">
       <div class="d-flex align-center justify-space-between w-100">
         <div>
           <img class="mx-auto" style="padding-left: 22px;"  src="@/assets/image/edmachina.svg" alt="logo">
+          
         </div>
         <div class="d-flex align-center" style="padding: 0 10px;">
           <v-avatar class="iconNav" style="color: white;" :icon="web"></v-avatar>
@@ -19,7 +20,8 @@
               <p class="icon-user-p">admin</p>
             </div>
             <div>
-              <v-avatar  image="@/assets/image/navUser.svg" ></v-avatar>
+              <v-avatar style="position: relative;"   image="@/assets/image/navUser.svg" ></v-avatar>
+              <span class="in-line">.</span>
             </div>
           </div>
         </div>

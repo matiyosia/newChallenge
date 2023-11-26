@@ -1,7 +1,7 @@
   <template>
 
     <div class="home">
-      <div >
+      <div>
          <div class="home-panel">
           <v-card
           v-for="(item,i) in data.sidebar" :key="i"
@@ -20,7 +20,7 @@
                   <p>Reg ID: {{ item.id }}</p>
                 </div>
                 <div>
-                  <v-icon style="padding-left: 90px; font-size: 15px; color:  rgb(110, 107, 123);" icon=" mdi-content-copy" />
+                  <v-icon style="padding-left: 60px; font-size: 15px; color:  rgb(110, 107, 123);" icon=" mdi-content-copy" />
                 </div>
               </div>
               <p>Status: {{ item.status }}</p>
@@ -72,3 +72,4 @@
   }
   }
   </script>
+./collapse/Colapse.vue./content/Content.vue

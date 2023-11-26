@@ -4,7 +4,7 @@
                     <img src="@/assets/image/iconDetail.svg" alt="icon">
 
                   </div>
-                    <v-card class="content">
+                    <div class="content">
                     <v-tabs
                         v-model="tab"
                         style="border: none;"
@@ -22,7 +22,7 @@
                             <v-window-item value="one" >
                               <div class="content-card">
   <v-card v-for="(card, i) in data.cardOverview" :key="i" width="100%" class="custom-card">
-    <v-card-text style="background-color: white;">
+    <v-card-text style="background-color: white;border: white;">
       <div class="content-card-flex">
         <div>
           <v-avatar
@@ -68,7 +68,7 @@
                         </v-window-item>
                         </v-window>
                     </v-card-text>
-                    </v-card>
+                    </div>
                 </template>
 
 <script>

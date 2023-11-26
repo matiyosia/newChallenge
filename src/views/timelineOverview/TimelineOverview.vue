@@ -47,7 +47,7 @@
             >
             <p class="timeline-title">{{ item.title }}</p>
             <v-card class="cardTimeline">
-                <v-card-text style="background:#F0F0F0 ;width:970px;" class="text--primary">
+                <v-card-text style="background:#F0F0F0 ;width:910px;" class="text--primary">
                     <div>
                         <div class="date">
                         <div>
@@ -93,44 +93,54 @@
             {
                 id: 2,
                 color: '#7367F0',
-                icon: 'mdi-calendar',
-                text: 'Segundo evento',
+                icon: 'mdi-message-text',
+                //icon: 'mdi-calendar',
+                text: 'Whatsapp chat meeting.',
                 name:'Whathsap',
                 date:'Ago-23,2023-13:32',
                 titleColor:'Chat Meeting',
-                subTitle:'by Gerardo Moyano',
+                subTitle:'by Prof. Jean Charleton',
             },
             {
                 id: 3,
                 color: '#7367F0',
                 icon: 'mdi-school',
                 title:'Agust 2023',
-                subTitle:'by prof. Jean Chaleton',
+                subTitle:'by Danielle Munchen Schollengberg',
                 name:'Inactive',
                 text: 'For:"Career Plannig and Developmen" Assignment Name:"Quiz 01",Delivered ON TIME. Grade :TBD',
-                date:'Nov-23,2023-13:32'
+                date:'Nov-23,2023-13:32',
+                titleColor:'LMS Assignment Delivered'
+
             },
             {
                 id: 4,
                 color: '#7367F0',
                 icon: 'mdi-phone',
-                text: 'For:"Career Plannig and Developmen" Assignment Name:"Quiz 01",Delivered ON TIME. Grade :TBD',
+                text: 'For: “Career Planning and Development”Assignment Name: “Quiz 01”, Delivered ON TIME.Grade: TBD',
                 name:'Direct call',
-                date:'Sep-23,2023-13:32'
+                date:'Sep-23,2023-13:32',
+                subTitle:'from Gerardo Moyano',
+                titleColor:'Call'
                 },
                 {
                 id: 5,
                 color: '#7367F0',
-                text: 'For:"Career Plannig and Developmen" Assignment Name:"Quiz 01",Delivered ON TIME. Grade :TBD',
+                text: 'from Career Planning and Development,by Prof. Jean Charleton',
                 name:'Direct call',
-                date:'Sep-23,2023-13:32'
+                date:'Sep-23,2023-13:32',
+                titleColor:'Tag Added',
+                subTitle:'Multiple Problems, Injuried, Check, Late'
                 },
                 {
                 id: 6,
                 color: '#7367F0',
-                text: 'For:"Career Plannig and Developmen" Assignment Name:"Quiz 01",Delivered ON TIME. Grade :TBD',
+                text: 'by Gerardo Moyano',
                 name:'Direct call',
-                date:'Sep-23,2023-13:32'
+                date:'Sep-23,2023-13:32',
+                titleColor:'Tag Added',
+                subTitle:'Inactive, Control, Schollarship'
+
                 },
                 {
                 id: 7,

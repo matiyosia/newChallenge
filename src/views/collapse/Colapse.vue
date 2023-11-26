@@ -48,7 +48,7 @@
                 <li>{{ item.firstName}}</li>
                 <li>Apellido: </li>
                 <li>{{ item.lastName }}</li>
-                <li class="colapse-email">Email: {{ email}}
+                <li class="colapse-email">Email: 
                   <hr>
     <div >
     <span
@@ -80,6 +80,7 @@
     </v-dialog>
   </div>
                 </li>
+                <li>{{ email}}</li>
                 <li>Celular: </li>
                 <li>{{ item.phoneNumber }}</li>
                 <li>Pais:</li>
@@ -147,11 +148,11 @@
     },
     data() {
       return {
-        panel: null,
-        panels: null,
-        panelCareer:null,
-        readonly: false,
-        dialog: false,
+        panel: [0],
+        panels: [0],
+        panelCareer:[0],
+        readonly: [0],
+        dialog: null,
         editEmail:'',
         email:'danielle_munchen@gmail.com'
       }
