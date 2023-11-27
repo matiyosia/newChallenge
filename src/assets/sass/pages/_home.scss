@@ -8,7 +8,7 @@
         margin-left: 5px; 
     }
     &-content{
-      width: 1200px;
+      width: 100%;
       min-width: 1024px;
     }
     &-card{
@@ -113,6 +113,11 @@
 
 .flexbox{
   display: flex;
-  justify-content: space-between;
+  align-items: flex-start;
   gap: 5px;
+  align-self: stretch;
+}
+
+.flex-width{
+  width: 98px;
 }

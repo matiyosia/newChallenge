@@ -4,10 +4,6 @@
     .v-theme--light, .v-card--density-default{
         border: none !important;
     }
-    .v-card-text{
-        background-color: $gray-50;
-        margin-left: -10px !important;
-    }
     .v-slide-group__container{
         background-color: $gray-50;
     }
@@ -27,19 +23,28 @@
         text-transform: capitalize !important;
     }
    
+    .v-card-text{
+        background-color: $gray-50;
+        padding: 0px !important;
+    }
     
-    
+}
+#card{
+    .v-card-text{
+        background-color: $gray-50;
+        padding: 0px 20px!important;
+    }
 }
 #border{
     .v-slide-group__content{
-        border-bottom: 3px solid #DDDDDD !important;
+        border-bottom: 2px solid #DDDDDD !important;
     }
 }
 
 .content-card{
     display: flex;
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: 20px;
+    margin-bottom: 30px;
 }
 
 .content-card-flex {
@@ -93,7 +98,30 @@
         display: none !important;
     }
     .v-btn{
-        border-radius: 6px 6px !important;
+        border-radius: 6px 0px !important;
     }
    
+}
+
+.cards{
+    background-color: white;
+    border: white; 
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+.v-expansion-panel-text__wrapper{
+ padding: 0px 23px 1px!important;
+}
+
+.flexColapse{
+    line-height: 1.5 !important;
+}
+.title{
+    margin-top: 5px;
+}
+
+.risk-detail{
+    @include font-size(14,30,700);
+    color: $gray-100;
 }

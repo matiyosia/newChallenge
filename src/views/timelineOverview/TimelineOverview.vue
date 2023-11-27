@@ -2,7 +2,7 @@
             <div class="activity">
                 <div class="activity-container">
                 <div>
-                    <p style="font-size: 18px; font-weight: 700; color: #888888;">Timeline</p>
+                    <p style="font-size: 18px; font-weight: 700; color: #888888;padding-left: 0.5rem;">Timeline</p>
                 </div>
                 <div class="activity-select">   
                 <v-select
@@ -46,8 +46,8 @@
             :size="item.icon ? 'small' : 'x-small'" 
             >
             <p class="timeline-title">{{ item.title }}</p>
-            <v-card class="cardTimeline">
-                <v-card-text style="background:#F0F0F0 ;width:910px;" class="text--primary">
+            <div class="cardTimeline">
+                <v-card-text style="background:#F0F0F0" class="text--primary">
                     <div>
                         <div class="date">
                         <div>
@@ -57,11 +57,11 @@
                             <p>{{ item.date}}</p>
                         </div>
                         </div>
-                        <p class="date-p-text">{{ item.text }}  <span style="color: #7367F0;">{{ item.name }}</span></p>
+                        <p class="date-p-text">{{ item.text }} <span style="color: #7367F0;">{{ item.name }}</span></p>
                     </div>
                     
                 </v-card-text>
-            </v-card>
+            </div>
             </v-timeline-item>
             </v-timeline>
         
@@ -94,7 +94,6 @@
                 id: 2,
                 color: '#7367F0',
                 icon: 'mdi-message-text',
-                //icon: 'mdi-calendar',
                 text: 'Whatsapp chat meeting.',
                 name:'Whathsap',
                 date:'Ago-23,2023-13:32',

@@ -11,17 +11,17 @@
           
           <v-btn class="text-none " stacked>
             <v-badge content="4" color="error">
-              <v-icon style="color: white;">mdi-bell-outline</v-icon>
+              <v-icon style="color: white;">mdi-bell</v-icon>
             </v-badge>
           </v-btn>
           <div class="icon-user">
             <div class="icon-user-flex">
               <h4 class="icon-user-h4">Hellen Smit</h4>
-              <p class="icon-user-p">admin</p>
+              <p class="icon-user-p">Admin</p>
             </div>
             <div>
               <v-avatar style="position: relative;"   image="@/assets/image/navUser.svg" ></v-avatar>
-              <span class="in-line">.</span>
+              <img class="in-line" src="@/assets/image/line.svg" alt="">
             </div>
           </div>
         </div>

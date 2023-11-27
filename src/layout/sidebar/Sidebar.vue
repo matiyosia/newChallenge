@@ -3,32 +3,37 @@
     id="siderLayaput"
     expand-on-hover
     rail
+    :value="isExpanded"
+    @input="handleDrawer"
   >
-
-  
     <v-list>
       <v-list-item
       style="background: rgb(68, 54, 253); border-radius: 10px; margin:5px;padding: 10px; color: white;"
         prepend-icon="mdi-home"
         title="Dashboard"
+        @click="goDirect('/')"
       ></v-list-item>
     </v-list>
-
-    <img v-if="!isExpanded" style="margin-left: 20px;padding-top: 0px; width: 15px;" src="@/assets/image/carduser/more.svg" alt="more">
-
+    <img
+      v-if="!isExpanded"
+      style="margin-left: 20px;padding-top: 0px;padding-bottom: 0px; width: 15px;"
+      src="@/assets/image/carduser/more.svg"
+      alt="more"
+    >
+    <p v-else-if="isExpanded">Reports</p>
     <v-list density="compact" nav >
    
     <v-list>
   <v-list-item
-  style="background: white;box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; margin-top: 10px; padding: 10px; "
+  style="background: white; border-radius: 10px; margin-top: -24px; padding: 10px; "
   @click="goDirect(path)"
   value="Setting profile"
 >
-<v-list-subheader>REPORTS</v-list-subheader>
+<v-list-subheader class="reportNav">REPORTS</v-list-subheader>
   <v-list-item-title ><div style="display: flex;gap: 2.5rem;"><img src="@/assets/image/sidebar/suma.svg" alt="Profile Image" /> <p>Smart Enrroller</p></div></v-list-item-title>
 </v-list-item>
   <v-list-item
-  style="background: white;box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; margin-top: 10px; padding: 10px; "
+  style="background: white;border-radius: 10px; margin-top: 10px; padding: 10px; "
   @click="goDirect(path)"
   value="Setting profile"
 >
@@ -41,7 +46,7 @@
       :value="item"
       color="primary"
       
-        style="background: white;box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; margin-top: 10px; padding: 10px; "
+        style="background: white;border-radius: 10px; margin-top: 10px; padding: 10px; "
         >
         <template  v-slot:prepend>
           <v-icon :icon="item.icon"></v-icon>
@@ -56,8 +61,8 @@
     <v-list-group value="Users">
       <template v-slot:activator="{ props }">
         <v-list-item-title
-          class="active"
-           style="background: white;box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; margin-top: 10px; padding: 10px;" v-bind="props">
+           class="active"
+           style="background: white;border-radius: 10px; margin-top: 10px; padding: 10px;" v-bind="props">
           <div  style="display: flex; gap: 2rem; justify-content: space-between;">
             <img class="activeIcon" style="width: 20px; height: 20px;" src="@/assets/image/sidebar/risk.svg" alt="Profile Image" />
             <p>Risk Detector</p>
@@ -86,7 +91,7 @@
             v-bind="props"
             prepend-icon="mdi-school"
             title="Academic Offer"
-            style="background: white;box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; margin-top: 10px; padding: 10px; "
+            style="background: white;border-radius: 10px; margin-top: 10px; padding: 10px; "
       
           ></v-list-item>
           
@@ -101,21 +106,21 @@
 
 
        <v-list-item
-  style="background: white;box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; margin-top: 10px; padding: 10px; "
+  style="background: white;border-radius: 10px; margin-top: 10px; padding: 10px; "
   @click="goDirect(path)"
   value="Setting profile"
 >
   <v-list-item-title ><div style="display: flex;gap: 2.5rem;"><img src="@/assets/image/sidebar/report.svg" alt="Profile Image" /> <p>My Report</p></div></v-list-item-title>
 </v-list-item>
        <v-list-item
-  style="background: white;box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; margin-top: 10px; padding: 10px; "
+  style="background: white;border-radius: 10px; margin-top: 10px; padding: 10px; "
   @click="goDirect(path)"
   value="Setting profile"
 >
   <v-list-item-title ><div style="display: flex;gap: 2.5rem;"><img src="@/assets/image/sidebar/customeReport.svg" alt="Profile Image" /> <p>Custom Report</p></div></v-list-item-title>
 </v-list-item>
        <v-list-item
-  style="background: white;box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; margin-top: 10px; padding: 9px; "
+  style="background: white;border-radius: 10px; margin-top: 10px; padding: 9px; "
   @click="goDirect(path)"
   value="Setting profile"
 >
@@ -145,8 +150,8 @@ export default {
       openOffer:[''],
       riskDetectorItems: [
         { title: 'My report', path: '/' },
-        { title: 'My report', path: '/' },
-        { title: 'My report', path: '/' },
+        { title: 'My report', path: '/q' },
+        { title: 'My report', path: '/w' },
       ],
       items: [
         { text: 'Retention Partner', icon: 'mdi-cached' },
@@ -157,6 +162,11 @@ export default {
   mounted(){
   this.handleChange()
 },
+watch: {
+  isExpanded(newVal) {
+      this.showImage = !newVal;
+    },
+  },
   methods: {
     goDirect(route) {
       this.$router.push({ path: route });
