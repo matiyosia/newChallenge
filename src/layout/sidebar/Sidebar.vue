@@ -5,15 +5,14 @@
     rail
     :value="isExpanded"
     @input="handleDrawer"
+
   >
-    <v-list>
-      <v-list-item
-      style="background: rgb(68, 54, 253); border-radius: 10px; margin:5px;padding: 10px; color: white;"
-        prepend-icon="mdi-home"
-        title="Dashboard"
-        @click="goDirect('/')"
-      ></v-list-item>
-    </v-list>
+    <div class="navIconHome" >
+			<span class="material-icons">
+			home
+		</span>
+		<p>Dashboard</p>
+		</div>
     <img
       v-if="!isExpanded"
       style="margin-left: 20px;padding-top: 0px;padding-bottom: 0px; width: 15px;"

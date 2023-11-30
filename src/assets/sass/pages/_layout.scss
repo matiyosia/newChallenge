@@ -13,13 +13,36 @@
 }
 
 #siderLayaput{
+  .v-navigation-drawer__content{
+
+    background-color: #FFFFFF;
+  }
     .v-list-item--active{
         background-color: $primary !important;
         color: $white !important;
     }
+
     .v-list{
-      box-shadow: none !important;
+   
+      
+
     }
+    .v-list-item--density-default:not(.v-list-item--nav).v-list-item--one-line{
+      padding-inline: 12px !important;
+     
+    }
+}
+
+.navIconHome{
+	display: flex;
+	gap: 2rem;
+	background-color: rgb(68, 54, 253);
+	border-radius: 6px;
+	color: white !important;
+	padding: 10px 7px 7px;
+	cursor: pointer;
+  
+	
 }
 
 .active {
