@@ -4,7 +4,7 @@
                     <img src="@/assets/image/iconDetail.svg" alt="icon">
 
                   </div>
-                    <v-card class="content">
+                    <div class="content">
                     <v-tabs
                         v-model="tab"
                         style="border: none;"
@@ -21,8 +21,8 @@
                             <v-window v-model="tab">
                             <v-window-item value="one" >
                               <div class="content-card">
-  <v-card v-for="(card, i) in data.cardOverview" :key="i" width="100%" class="custom-card">
-    <v-card-text style="background-color: white;">
+  <div id="card" v-for="(card, i) in data.cardOverview" :key="i" style="width: 100%;" class="custom-card">
+    <div class="cards" >
       <div class="content-card-flex">
         <div>
           <v-avatar
@@ -48,8 +48,8 @@
         <p class="created">{{ card.created }}</p>
         <p class="createDate">{{ card.createDate }}</p>
       </div>
-    </v-card-text>
-  </v-card>
+    </div>
+  </div>
 </div>
 
 
@@ -68,7 +68,7 @@
                         </v-window-item>
                         </v-window>
                     </v-card-text>
-                    </v-card>
+                    </div>
                 </template>
 
 <script>

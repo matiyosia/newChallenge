@@ -1,11 +1,11 @@
   <template>
 
     <div class="home">
-      <div >
+      <div>
          <div class="home-panel">
-          <v-card
+          <div
           v-for="(item,i) in data.sidebar" :key="i"
-            width="340px"
+            style="width: 340px; background-color: white; border-radius: 6px;margin-right: 0.2rem;"
             
           >
               <div class="home-card">
@@ -20,7 +20,7 @@
                   <p>Reg ID: {{ item.id }}</p>
                 </div>
                 <div>
-                  <v-icon style="padding-left: 90px; font-size: 15px; color:  rgb(110, 107, 123);" icon=" mdi-content-copy" />
+                  <v-icon style="padding-left: 60px; font-size: 15px; color:  rgb(110, 107, 123);" icon=" mdi-content-copy" />
                 </div>
               </div>
               <p>Status: {{ item.status }}</p>
@@ -37,7 +37,7 @@
             <v-card-text>
               
             </v-card-text>
-        </v-card>
+          </div>
 
         <div>
           <Colapse :data="data"/>
@@ -72,3 +72,4 @@
   }
   }
   </script>
+./collapse/Colapse.vue./content/Content.vue

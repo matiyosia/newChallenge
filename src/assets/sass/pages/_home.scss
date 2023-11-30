@@ -1,16 +1,14 @@
 .home{
     display: flex;
     gap: 20px;
-   
     &-panel{
-        overflow-y: scroll;
-        overflow-x: hidden;
-        height: 730px;
-        margin-left: 3px;
-        
+        overflow-y: scroll !important;
+        overflow-x: hidden !important;
+        height: 830px;
+        margin-left: 5px; 
     }
     &-content{
-      width: 1200px;
+      width: 100%;
       min-width: 1024px;
     }
     &-card{
@@ -107,32 +105,19 @@
     width: 300px; 
   }
   
-  @media (max-width: #{$screen-sm-min}px) {
-    .sider {
-      width: 100% !important;
-    }
-  
-    .sider-expanded {
-      width: 100%; 
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
+
   .cardRegId{
     display: flex;
 
   }
-  @media (min-width: #{$screen-md-min}px) and (max-width: #{$screen-lg-min}px) {
-    .sider {
-      width: 100%; 
-    }
-  
-    .sider-expanded {
-      width: 100%; 
-    }
-  }
+
 .flexbox{
   display: flex;
-  justify-content: space-between;
+  align-items: flex-start;
   gap: 5px;
+  align-self: stretch;
+}
+
+.flex-width{
+  width: 98px;
 }

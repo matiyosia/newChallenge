@@ -10,7 +10,7 @@
       style="width: 340px;"
     >
       <v-expansion-panel>
-        <v-expansion-panel-title class="colapse-title"> <img style="padding-right: 5px;" src="@/assets/image/colapse.svg" alt=""> Detalles del estudiante</v-expansion-panel-title>
+        <v-expansion-panel-title class="colapse-title"> <img style="padding-right: 5px;" src="@/assets/image/colapse.svg" alt="">Sobre el estudiante</v-expansion-panel-title>
         <v-expansion-panel-text v-for="(item,j) in val.student" :key="j">
             <ul class="colapse-list">
                 <li>Periodo: {{ item.period }}</li>
@@ -19,11 +19,12 @@
                 <li>Mod Admision: {{ item.admission }}</li>
                 <li>Segmento: {{ item.segment }}</li>
                 <li>Segmento detalle: {{ item.segment }}</li>
+                <h2 class="risk-detail">Detalle Riesgo de Ingreso:</h2>
                 <hr>
-                <li><div class="flexbox"><div><p>Matematica:</p> </div><div><p>{{ item.matematica }}</p></div></div></li>
-                <li><div class="flexbox"><div><p>Quimica:</p> </div><div><p>{{ item.quimica }}</p></div></div></li>
-                <li><div class="flexbox"><div><p>Programación:</p> </div><div><p>{{ item.programacion }}</p></div></div></li>
-                <li><div class="flexbox"><div><p>Comunicación:</p> </div><div><p>{{ item.comunicacion }}</p></div></div></li>
+                <li><div class="flexbox"><div><p class="flex-width">Matematica:</p> </div><div><p>{{ item.matematica }}</p></div></div></li>
+                <li><div class="flexbox"><div><p class="flex-width">Quimica:</p> </div><div><p>{{ item.quimica }}</p></div></div></li>
+                <li><div class="flexbox"><div><p class="flex-width">Programación:</p> </div><div><p>{{ item.programacion }}</p></div></div></li>
+                <li><div class="flexbox"><div><p class="flex-width">Comunicación:</p> </div><div><p>{{ item.comunicacion }}</p></div></div></li>
             </ul>
         </v-expansion-panel-text>
       </v-expansion-panel>
@@ -42,13 +43,13 @@
         <v-expansion-panel-title class="colapse-title"><img style="padding-right: 5px;" src="@/assets/image/colapse.svg" alt=""> About</v-expansion-panel-title>
         <v-expansion-panel-text  v-for="(item,j) in val.about" :key="j" >
             <ul class="colapse-list">
-                <li>Periodo: </li>
-                <li>{{ item.period }}</li>
-                <li>Nombre: </li>
-                <li>{{ item.firstName}}</li>
-                <li>Apellido: </li>
-                <li>{{ item.lastName }}</li>
-                <li class="colapse-email">Email: {{ email}}
+                <li  class="flexColapse title">First Name: </li>
+                <li class="flexColapse">{{ item.firstName}}</li>
+                
+                <li  class="flexColapse title">Last Name:</li>
+                <li class="flexColapse">{{ item.lastName }}</li>
+                
+                <li class="colapse-email">Email: 
                   <hr>
     <div >
     <span
@@ -80,12 +81,18 @@
     </v-dialog>
   </div>
                 </li>
-                <li>Celular: </li>
-                <li>{{ item.phoneNumber }}</li>
-                <li>Pais:</li>
-                <li> {{ item.country }}</li>
-                <li>Categoria: </li>
-                <li>{{ item.category}}</li>
+                <li>{{ email}}</li>
+                <hr>
+             
+                <li class="flexColapse title">Phone Number: </li>
+                <li class="flexColapse ">{{ item.phoneNumber }}</li>
+               
+                <li class="flexColapse title">Country: </li>
+                <li class="flexColapse"> {{ item.country }}</li>
+                
+                <li class="flexColapse title">Category: </li>
+                <li class="flexColapse">{{ item.category}}</li>
+                
                 
             </ul>
         </v-expansion-panel-text>
@@ -111,18 +118,18 @@
                     variant="solo"
                     ></v-select>
                 </li>
-                <li>Carrera ID: </li>
-                <li>{{ item.careerId }}</li>
-                <li>Tipo: </li>
-                <li>{{ item.type }}</li>
-                <li>Modalidad: </li>
-                <li>{{ item.modality }}</li>
-                <li>Status: </li>
-                <li>{{ item.status}}</li>
-                <li>Estudiante ID: </li>
-                <li>{{ item.studentId }}</li>
-                <li>Cohorte: </li>
-                <li>{{ item.cohort }}</li>
+                <li class="flexColapse title">Carrera ID: </li>
+                <li class="flexColapse ">{{ item.careerId }}</li>
+                <li class="flexColapse title">Tipo: </li>
+                <li class="flexColapse">{{ item.type }}</li>
+                <li class="flexColapse title">Modalidad: </li>
+                <li class="flexColapse">{{ item.modality }}</li>
+                <li class="flexColapse title">Status: </li>
+                <li class="flexColapse">{{ item.status}}</li>
+                <li class="flexColapse title">Estudiante ID: </li>
+                <li class="flexColapse">{{ item.studentId }}</li>
+                <li class="flexColapse title">Cohorte: </li>
+                <li class="flexColapse">{{ item.cohort }}</li>
             </ul>
         </v-expansion-panel-text>
       </v-expansion-panel>
@@ -147,11 +154,11 @@
     },
     data() {
       return {
-        panel: null,
-        panels: null,
-        panelCareer:null,
-        readonly: false,
-        dialog: false,
+        panel: [0,1],
+        panels: [0,1],
+        panelCareer:[0,1],
+        readonly: null,
+        dialog: null,
         editEmail:'',
         email:'danielle_munchen@gmail.com'
       }

@@ -1,7 +1,7 @@
 <template>
     <v-layout ref="app" class="rounded rounded-md">
       <NavBar/>
-    <Sidebar/>
+    <DrawerMenu/>
     <v-main >
         <div class="masterPage">
             <router-view />
@@ -25,6 +25,7 @@
 <script setup>
 import Sidebar from '../layout/sidebar/Sidebar.vue'
 import NavBar from '../layout/navbar/NavBar.vue'
+import DrawerMenu from '@/layout/sidebar/DrawerMenu.vue';
   
   </script>
   
