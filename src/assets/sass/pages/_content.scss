@@ -1,9 +1,7 @@
 .content{
     width: 100%;
     min-width: 400px;
-    .v-theme--light, .v-card--density-default{
-        border: none !important;
-    }
+
     .v-slide-group__container{
         background-color: $gray-50;
     }
@@ -111,7 +109,8 @@
     margin-top: 20px;
 }
 .v-expansion-panel-text__wrapper{
- padding: 0px 23px 1px!important;
+    padding: 1px 15px 13px !important;
+    margin-top: -0.7rem !important;
 }
 
 .flexColapse{
@@ -124,4 +123,25 @@
 .risk-detail{
     @include font-size(14,30,700);
     color: $gray-100;
+}
+
+.v-expansion-panel__shadow{
+    box-shadow:none !important;
+}
+
+.manage{
+    background-color: white;
+    width: 340px;
+    padding: 10px;
+    border-radius: 6px;
+
+    .p-manage{
+        color: #7367F0;
+        font-family: 12px;
+        font-weight: 700;
+    }
+}
+
+.emails{
+    margin-top: -8px;
 }

@@ -6,29 +6,30 @@
                 </div>
                 <div class="activity-select">   
                 <v-select
-                    style="width: 110px;height: 38px;"
+                    class="select-primary"
                     placeholder="Year"
                     label="Yaer"
                     v-model="selectedYear"
                     :items="years"
-                    variant="solo"
+                    variant="outlined"
                 ></v-select>
                 <v-select
-                    style="width: 140px;height: 38px;"
+                    style="width: 140px;height: 38px;  box-shadow: none;"
                     placeholder="Filter By User"
                     label="Filter By User"
                     v-model="selectedUSer"
                     :items="name"
-                    variant="solo"
+                    variant="outlined"
                 ></v-select>
 
                 <v-text-field
-                style="width: 243px;height: 38px;"
+                style="width: 243px;height: 38px;  box-shadow: none;"
         :loading="loading"
         density="compact"
-        variant="solo"
+        variant="outlined"
         label="Search.."
         append-inner-icon="mdi-magnify"
+        class="placeholder"
         single-line
         hide-details
         @click:append-inner="onClick"
