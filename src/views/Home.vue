@@ -5,7 +5,7 @@
          <div class="home-panel">
           <div
           v-for="(item,i) in data.sidebar" :key="i"
-            style="width: 340px; background-color: white; border-radius: 6px;margin-right: 0.2rem;"
+            style="width: 340px; background-color: white; border-radius: 6px;margin-right: 0.4rem;"
             
           >
               <div class="home-card">

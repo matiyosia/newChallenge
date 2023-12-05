@@ -33,6 +33,10 @@
     }
 }
 
+.home-panel::-webkit-scrollbar{
+  height: 50px !important;
+}
+
 .colapse{
     display: flex;
     width: 100%;
@@ -49,6 +53,7 @@
     &-title{
         @include font-size(15,22,600);
         color: $gray;
+        margin-left: -0.5rem;
     }
     &-email{
         display: flex;

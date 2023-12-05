@@ -1,6 +1,7 @@
 .activity{
     .v-input__control{
         height: 50px !important;
+        color: #a09dab !important;
     }
     margin-bottom: 40px;
     &-container{
@@ -58,7 +59,7 @@ padding: 3px;
     border-radius: 4px;
     padding: 10px;
     background:#F0F0F0 ;
-    width:1015px;
+    width:1125px;
     min-width: 990px;
 }
 .border-none-tabs {
@@ -68,11 +69,10 @@ padding: 3px;
   .timelineContainer{
     display: flex;
     justify-content: flex-start;
-    margin-top: 20px;
-    margin-left: -20px;
+    margin-left: -18px;
     overflow-y: scroll;
     height: 385px;
-    padding: 10px;
+    margin: 10px;
   }
   .timeline-title{
     color: $violet;
@@ -100,6 +100,7 @@ padding: 3px;
 
   .v-timeline--vertical.v-timeline{
     row-gap: 9px !important;
+    margin-left: -1rem;
   }
 
 .v-timeline > .v-timeline-item:first-child .v-timeline-divider__before {
@@ -109,4 +110,18 @@ padding: 3px;
 .v-card-text{
     border: none !important;
     border-radius: none !important;
+}
+
+.select-primary{
+    width: 110px;
+    height: 38px;
+    outline:  #D8D6DE;
+}
+
+.v-messages{
+    display: none;
+}
+
+.placeholder::placeholder{
+    margin-top: 5px !important;
 }

@@ -81,7 +81,7 @@
     </v-dialog>
   </div>
                 </li>
-                <li>{{ email}}</li>
+                <li class="emails">{{ email}}</li>
                 <hr>
              
                 <li class="flexColapse title">Phone Number: </li>
@@ -115,8 +115,8 @@
                     <v-select
                     label="Seleciona una opcion"
                     :items="['Software Developer', 'Testing']"
-                    variant="solo"
-                    ></v-select>
+                    variant="outlined"
+                    />
                 </li>
                 <li class="flexColapse title">Carrera ID: </li>
                 <li class="flexColapse ">{{ item.careerId }}</li>
@@ -135,12 +135,12 @@
       </v-expansion-panel>
     </v-expansion-panels>
     <div>
-          <v-card width="340">
+          <div class="manage">
 
-      <template v-slot:subtitle >
-        <p style="color: #7367F0;font-family: 12; font-weight: 700;">Manage Widgets</p>
-      </template>
-    </v-card>
+      <div >
+        <p class="p-manage">Manage Widgets</p>
+      </div>
+    </div>
         </div>
     </div>
   </template>
