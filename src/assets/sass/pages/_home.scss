@@ -1,128 +1,127 @@
-.home{
+.home {
+  display: flex;
+  gap: 20px;
+  &-panel {
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    height: 830px;
+    margin-left: 5px;
+  }
+  &-content {
+    width: 100%;
+    min-width: 1024px;
+  }
+  &-card {
     display: flex;
-    gap: 20px;
-    &-panel{
-        overflow-y: scroll !important;
-        overflow-x: hidden !important;
-        height: 830px;
-        margin-left: 5px; 
-    }
-    &-content{
-      width: 100%;
-      min-width: 1024px;
-    }
-    &-card{
-        display: flex;
-        margin: 10px;
-        align-items: stretch;
-        gap: 1rem;
-        padding: 15px ;
+    margin: 10px;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 15px;
 
-        h2{
-            @include font-size(16,22,600);
-            color: $primary;
-            min-width: 360px;
-        }
-        p{
-            @include font-size(16,25,700);
-            color: $gray;
-        }
-        img{
-            width: 65px;
-        }
+    h2 {
+      @include font-size(16, 22, 600);
+      color: $primary;
+      min-width: 360px;
     }
+    p {
+      @include font-size(16, 25, 700);
+      color: $gray;
+    }
+    img {
+      width: 65px;
+    }
+  }
 }
 
-.home-panel::-webkit-scrollbar{
+.home-panel::-webkit-scrollbar {
   height: 50px !important;
 }
 
-.colapse{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
+.colapse {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
 
-    &-list{
-        li{
-          @include font-size(12,30,700);
-          color: $gray-100;
-        }
+  &-list {
+    li {
+      @include font-size(12, 30, 700);
+      color: $gray-100;
     }
-    &-title{
-        @include font-size(15,22,600);
-        color: $gray;
-        margin-left: -0.5rem;
+  }
+  &-title {
+    @include font-size(15, 22, 600);
+    color: $gray;
+    margin-left: -0.5rem;
+  }
+  &-email {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      cursor: pointer;
     }
-    &-email{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        span{
-            cursor: pointer;
-        }
-    }
+  }
 }
 
-.icons-users{
+.icons-users {
   display: flex;
   justify-content: flex-end;
-  gap: 36px;
+  align-items: center;
+  gap: 33px;
   margin-right: 20px;
 }
 
-.icon-user{
+.icon-user {
+  display: flex;
+  padding: 10px;
+  gap: 15px;
+  &-flex {
     display: flex;
-    padding: 10px;
-    gap: 15px;
-    &-flex{
-      display: flex;
-      flex-direction: column;
-    }
-    &-h4{
-      color: $white;
-      @include font-size(14,25,700);
-    }
-    &-p{
-      display: flex;
-      color: $white;
-      flex-direction: row-reverse;
-      @include font-size(14,17,700);
-    }
+    flex-direction: column;
+  }
+  &-h4 {
+    color: $white;
+    @include font-size(14, 25, 700);
+  }
+  &-p {
+    display: flex;
+    color: $white;
+    flex-direction: row-reverse;
+    @include font-size(14, 17, 700);
+  }
 }
 
-.footer{
-  @include font-size(14,21,700);
+.footer {
+  @include font-size(14, 21, 700);
   color: $gray-100;
 }
 
-.v-expansion-panel-title__overlay{
+.v-expansion-panel-title__overlay {
   background-color: $white !important;
 }
 
 .sider {
-    width: 50px;
-    transition: width 0.3s; 
-  }
-  
-  .sider-expanded {
-    width: 300px; 
-  }
-  
+  width: 50px;
+  transition: width 0.3s;
+}
 
-  .cardRegId{
-    display: flex;
+.sider-expanded {
+  width: 300px;
+}
 
-  }
+.cardRegId {
+  display: flex;
+}
 
-.flexbox{
+.flexbox {
   display: flex;
   align-items: flex-start;
   gap: 5px;
   align-self: stretch;
 }
 
-.flex-width{
+.flex-width {
   width: 98px;
 }

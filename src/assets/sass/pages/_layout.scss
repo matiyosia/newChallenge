@@ -1,75 +1,76 @@
 .masterPage {
-    width: 100%;
-    padding: 20px 15px;
+  width: 100%;
+  padding: 20px 15px;
 }
 
-.in-line{
-    position: absolute;
-    font-size: 124px;
-    color: #28C76F;
-    z-index: 99;
-    bottom: 0.7rem;
-    right: 1.2rem;
+.in-line {
+  position: absolute;
+  font-size: 124px;
+  color: #28c76f;
+  z-index: 99;
+  bottom: 0.7rem;
+  right: 1.2rem;
 }
 
-#siderLayaput{
-  .v-navigation-drawer__content{
-
-    background-color: #FFFFFF;
+#siderLayaput {
+  .v-navigation-drawer__content {
+    background-color: #ffffff;
   }
-    .v-list-item--active{
-        background-color: $primary !important;
-        color: $white !important;
-    }
+  .v-list-item--active {
+    background-color: $primary !important;
+    color: $white !important;
+  }
 
-    .v-list{
-   
-      
-
-    }
-    .v-list-item--density-default:not(.v-list-item--nav).v-list-item--one-line{
-      padding-inline: 12px !important;
-     
-    }
+  .v-list-item--density-default:not(.v-list-item--nav).v-list-item--one-line {
+    padding-inline: 12px !important;
+  }
 }
 
-.navIconHome{
-	display: flex;
-	gap: 2rem;
-	background-color: rgb(68, 54, 253);
-	border-radius: 6px;
-	color: white !important;
-	padding: 10px 7px 7px;
-	cursor: pointer;
-  
-	
+.siderReport {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #babfc7;
+  margin-left: 0.6rem;
+}
+
+.navIconHome {
+  display: flex;
+  gap: 2rem;
+  background-color: rgb(68, 54, 253);
+  border-radius: 6px;
+  color: white !important;
+  padding: 10px 7px 7px;
+  cursor: pointer;
 }
 
 .active {
-    cursor: pointer;
-    .v-list-item-title{
-        background-color: $violet !important;
-    }
-    &:focus{
-      background-color: $primary !important;
-      color: white !important;
-    }
+  cursor: pointer;
+  .v-list-item-title {
+    background-color: $violet !important;
   }
-
-  .active:hover{
-    background: $gray-50 !important;
-  }
-  
-  .active:active{
+  &:focus {
     background-color: $primary !important;
     color: white !important;
   }
-  .activeIcon:active {
-    color: white !important;
-  }
+}
 
-  .reportNav{
-    @include font-size(12,18,700);
-    color:  #BABFC7;
-    margin-left: -0.5rem;
-  }
+.active:hover {
+  background: $gray-50 !important;
+}
+
+.active:active {
+  background-color: $primary !important;
+  color: white !important;
+}
+.activeIcon:active {
+  color: white !important;
+}
+
+.reportNav {
+  @include font-size(12, 18, 700);
+  color: #babfc7;
+  margin-left: -0.5rem;
+}
