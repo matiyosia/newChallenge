@@ -8,15 +8,16 @@
     style="border: none !important; background-color: white"
   >
     <div>
-      <v-list class="navIconHome">
-        <v-list-item>
-          <v-list-item-title class="flexbox-nav">
-            <span class="material-icons white"> home </span>
-            <p class="paragrhp-nav dash">Dashboard</p>
-          </v-list-item-title>
-        </v-list-item>
-      </v-list>
-
+      <RouterLink to="/">
+        <v-list class="navIconHome">
+          <v-list-item>
+            <v-list-item-title class="flexbox-nav">
+              <span class="material-icons white"> home </span>
+              <p class="paragrhp-nav dash">Dashboard</p>
+            </v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </RouterLink>
       <img
         v-if="isDrawerHovering()"
         style="
@@ -30,15 +31,16 @@
       />
       <p v-else class="siderReport">Reports</p>
 
-      <v-list class="focused">
-        <v-list-item>
-          <v-list-item-title class="flexbox-nav">
-            <span class="material-icons"> add_box </span>
-            <p class="paragrhp-nav">Smart Enroller</p>
-          </v-list-item-title>
-        </v-list-item>
-      </v-list>
-
+      <RouterLink to="/setting-profile">
+        <v-list class="focused">
+          <v-list-item>
+            <v-list-item-title class="flexbox-nav">
+              <span class="material-icons"> add_box </span>
+              <p class="paragrhp-nav">Smart Enroller</p>
+            </v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </RouterLink>
       <v-list class="focused">
         <v-list-item>
           <v-list-item-title class="flexbox-nav">

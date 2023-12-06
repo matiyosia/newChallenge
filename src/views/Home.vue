@@ -1,6 +1,7 @@
   <template>
 
     <div class="home">
+      <p v-if="loading">loading</p>
       <div>
          <div class="home-panel">
           <div

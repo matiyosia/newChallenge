@@ -23,7 +23,7 @@
           variant="outlined"
         ></v-select>
         <v-select
-          style="width: 140px; height: 38px; box-shadow: none"
+          style="width: 180px; height: 38px; box-shadow: none"
           placeholder="Filter By User"
           label="Filter By User"
           v-model="selectedUSer"
@@ -32,7 +32,7 @@
         ></v-select>
 
         <v-text-field
-          style="width: 243px; height: 38px; box-shadow: none"
+          style="width: 243px; height: 38px; box-shadow: none; color: red;"
           density="compact"
           variant="outlined"
           label="Search.."

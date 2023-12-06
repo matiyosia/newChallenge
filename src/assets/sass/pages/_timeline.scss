@@ -125,6 +125,26 @@
   width: 274px;
 }
 
-.placeholder::placeholder {
-  margin-top: 5px !important;
+.v-select .v-field .v-text-field__prefix,
+.v-select .v-field .v-text-field__suffix,
+.v-select .v-field .v-field__input,
+.v-select .v-field.v-field {
+  color: var(--Default-Text, #6E6B7B) !important;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  font-feature-settings: "clig" off, "liga" off;
+  margin-bottom: -3rem;
+}
+
+.placeholder {
+  .v-field--center-affix .v-label.v-field-label {
+    color: var(--Default-Text, #6E6B7B) !important;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-feature-settings: "clig" off, "liga" off;
+  }
 }

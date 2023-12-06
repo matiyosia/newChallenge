@@ -65,6 +65,17 @@
   }
 }
 
+.v-field {
+  height: 42px !important;
+
+  
+}
+.v-field__input {
+  color: #6e6b7b;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+}
 .icons-users {
   display: flex;
   justify-content: flex-end;
