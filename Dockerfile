@@ -1,19 +1,22 @@
-FROM node:20-slim AS base
-ENV PNPM_HOME="/pnpm"
-ENV PATH="$PNPM_HOME:$PATH"
-RUN corepack enable
-COPY . /app
+FROM node:lts-alpine
+
+# install simple http server for serving static content
+RUN npm install -g http-server
+
+# make the 'app' folder the current working directory
 WORKDIR /app
 
-FROM base AS prod-deps
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-lockfile
+# copy both 'package.json' and 'package-lock.json' (if available)
+COPY package*.json ./
 
-FROM base AS build
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
-RUN pnpm run build
+# install project dependencies
+RUN npm install
 
-FROM base
-COPY --from=prod-deps /app/node_modules /app/node_modules
-COPY --from=build /app/dist /app/dist
-EXPOSE 8000
-CMD [ "pnpm", "start" ]
+# copy project files and folders to the current working directory (i.e. 'app' folder)
+COPY . .
+
+# build app for production with minification
+RUN npm run build
+
+EXPOSE 8080
+CMD [ "http-server", "dist" ]
