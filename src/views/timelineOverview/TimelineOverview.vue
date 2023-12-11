@@ -32,7 +32,7 @@
         ></v-select>
 
         <v-text-field
-          style="width: 243px; height: 38px; box-shadow: none; color: red;"
+          style="width: 243px; height: 38px; box-shadow: none"
           density="compact"
           variant="outlined"
           label="Search.."
@@ -47,6 +47,7 @@
       <v-timeline side="end">
         <v-timeline-item
           v-for="(item, i) in filteredItems"
+          style="font-size: 11px;"
           :key="i"
           :dot-color="item.color"
           :icon="item.icon"
@@ -98,14 +99,14 @@ export default {
         subTitle: "by Gerardo Moyano",
         text: "Upselling email sent. ",
         name: "Wiew Email",
-        date: "Sep-23,2023-13:32",
+        date: "Sep 23, 2023 - 13:32",
       },
       {
         id: 2,
         color: "#7367F0",
         icon: "mdi-message-text",
         text: "Whatsapp chat meeting.",
-        date: "Ago-23,2023-13:32",
+        date: "Ago 23, 2023 - 13:32",
         titleColor: "Chat Meeting",
         subTitle: "by Prof. Jean Charleton",
       },
@@ -116,7 +117,7 @@ export default {
         title: "Agust 2023",
         subTitle: "by Danielle Munchen Schollengberg",
         text: "For: “Career Planning and Development” Assignment Name: “Quiz 01”, Delivered ON TIME. Grade: TBD",
-        date: "Nov-23,2023-13:32",
+        date: "Nov 23, 2023 - 13:32",
         titleColor: "LMS Assignment Delivered",
       },
       {
@@ -124,7 +125,7 @@ export default {
         color: "#7367F0",
         icon: "mdi-phone",
         text: "Direct Call made to +52 55 22126164 Call Duration: 0 mins. 10 sec.",
-        date: "Sep-23,2023-13:32",
+        date: "Sep 23, 2023 - 13:32",
         subTitle: "from Gerardo Moyano",
         titleColor: "Call",
       },
@@ -132,7 +133,7 @@ export default {
         id: 5,
         color: "#7367F0",
         text: "Multiple Problems, Injuried, Check, Late",
-        date: "Sep-23,2023-13:32",
+        date: "Sep 23, 2023 - 13:32",
         titleColor: "Tag Added",
         subTitle:
           "from Career Planning and Development,by Prof. Jean Charleton",
@@ -141,7 +142,7 @@ export default {
         id: 6,
         color: "#7367F0",
         text: "Inactive, Control, Schollarship",
-        date: "Sep-23,2023-13:32",
+        date: "Sep 23, 2023 - 13:32",
         titleColor: "Tag Added",
         subTitle: "by Gerardo Moyano",
       },
@@ -153,17 +154,26 @@ export default {
         subTitle: "by Prof. Jean Charleton",
         text: "Check email sent.",
         name: "Wiew Email",
-        date: "Sep-23,2023-13:32",
+        date: "Sep 23, 2023 - 13:32",
       },
       {
         id: 8,
         color: "#7367F0",
         icon: "mdi-phone",
         title: "July 2023",
-        subTitle: "by prof. Jean Chaleton",
-        name: "tres",
-        text: 'For:"Career Plannig and Developmen" Assignment Name:"Quiz 01",Delivered ON TIME. Grade :TBD',
-        date: "Sep-23,2023-13:32",
+        titleColor: "call",
+        subTitle: "from Gerardo Moyano",
+        text: "Direct Call made to +52 55 22126164 Call Duration: 1 mins. 22 sec.",
+        date: "Jul 12, 2023 - 1:45pm",
+      },
+      {
+        id: 9,
+        color: "#7367F0",
+        icon: "mdi-phone",
+        titleColor: "call",
+        subTitle: "from Gerardo Moyano",
+        text: "Direct Call made to +52 55 22126164 Call Duration: 1 mins. 22 sec.",
+        date: "Jul 12, 2023 - 1:45pm",
       },
     ],
   }),

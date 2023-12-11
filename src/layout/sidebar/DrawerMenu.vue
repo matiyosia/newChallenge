@@ -5,7 +5,7 @@
     expand-on-hover
     rail
     :v-show="drawerOpen"
-    style="border: none !important; background-color: white"
+    class="navigator"
   >
     <div>
       <RouterLink to="/">
@@ -149,6 +149,7 @@ export default {
   },
   mounted() {
     this.toggleDrawer();
+    console.log(this.$route.path);
   },
   methods: {
     handleExpanded() {
@@ -170,9 +171,7 @@ export default {
   watch: {
     drawerStateChanged(newVal, oldVal) {
       if (newVal !== oldVal && newVal === true) {
-        // Aquí puedes realizar acciones cuando el drawer se abra
-        console.log("El drawer se ha abierto automáticamente");
-        // Realizar otras acciones necesarias cuando el drawer se abra automáticamente
+        console.log("Open Drawer");
       }
     },
   },
@@ -190,6 +189,10 @@ export default {
   }
 }
 
+.navigator {
+  border: none !important;
+  background-color: white;
+}
 .flexNav {
   display: flex;
   align-items: center;
@@ -257,7 +260,11 @@ export default {
   color: #fff !important;
 }
 .focused {
-  // box-shadow: 4px 0px 15px 0px rgba(0, 0, 0, 0.11);
+  background-color: var(--menu-menu-bg, #fff) !important;
+  color: var(--menu-menu-button-text-default, #6e6b7b) !important;
+  font-feature-settings: "clig" off, "liga" off !important;
+  fill: var(--menu-menu-button-bg-default, #fff) !important;
+  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.05)) !important;
   padding: 0px;
   border-radius: 6px;
   margin-top: 10px !important;

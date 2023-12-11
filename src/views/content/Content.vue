@@ -29,20 +29,9 @@
             >
               <div class="cards">
                 <div class="content-card-flex" id="avatarsFlex">
-                  <div>
-                    <v-avatar
-                      :icon="card.icon"
-                      style="
-                        max-width: 42px;
-                        max-height: 42px;
-                        background: #91cc75;
-                        border-radius: 50%;
-                        color: white;
-                        align-items: center;
-                        margin-left: 5px;
-                      "
-                    ></v-avatar>
-                  </div>
+                  <span class="material-symbols-outlined materialIcons">
+                    {{ card.icon }}
+                  </span>
                   <div class="age-days" style="text-align: right; flex-grow: 1">
                     <div
                       style="

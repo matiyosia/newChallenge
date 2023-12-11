@@ -8,9 +8,9 @@ export const store = createStore({
     data:[]
   },
   actions:{
-   async getMock(contex){
+   async getMock(context){
         const data = await serviceMock.getMock()
-        contex.commit('GET_MOCK',data)
+        context.commit('GET_MOCK',data)
     }
   },
   mutations: {
