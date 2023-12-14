@@ -1,5 +1,5 @@
 import App from './App.vue'
-import './assets/sass/index.scss'
+// import './assets/sass/index.scss'
 // Composables
 import { createApp } from 'vue'
 import { registerPlugins } from './plugins'

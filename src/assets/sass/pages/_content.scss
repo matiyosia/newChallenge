@@ -42,6 +42,14 @@
   display: flex;
   gap: 15px;
   margin-bottom: 30px;
+  @include device-lg("max") {
+    flex-wrap: wrap;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
 }
 
 .content-card-flex {
@@ -95,7 +103,10 @@
     display: none !important;
   }
   .v-btn {
-    border-radius: 6px 0px !important;
+    border-top-left-radius: 6px !important; /* Radio de borde para la esquina superior izquierda */
+    border-top-right-radius: 6px !important;
+
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05) !important;
   }
 }
 
@@ -105,6 +116,7 @@
   padding: 15px;
   border-radius: 6px;
   margin-top: 20px;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
 }
 .v-expansion-panel-text__wrapper {
   padding: 1px 15px 13px !important;
@@ -121,6 +133,12 @@
 .risk-detail {
   @include font-size(14, 30, 700);
   color: $gray-100;
+  margin-top: 20px;
+}
+
+.hr-btn {
+  border-top: 0.1rem solid #dddddd;
+  margin-top: 5px;
 }
 
 .v-expansion-panel__shadow {
@@ -165,4 +183,16 @@
 .material-symbols-outlined {
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
   align-items: center;
+}
+
+#activityGray {
+  .v-btn__content {
+    color: $gray-100 !important;
+  }
+}
+
+.v-expansion-panel--active
+  > .v-expansion-panel-title:not(.v-expansion-panel-title--static) {
+  min-height: 0px !important;
+  padding: 15px 3px 17px 23px !important;
 }

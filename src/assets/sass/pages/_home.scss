@@ -1,6 +1,9 @@
 .home {
   display: flex;
   gap: 20px;
+  @include device-lg("max") {
+    flex-wrap: wrap;
+  }
   &-panel {
     overflow-y: scroll !important;
     overflow-x: hidden !important;
@@ -10,6 +13,10 @@
   &-content {
     width: 100%;
     min-width: 1024px;
+    @include device-lg("max") {
+      width: 400px;
+      min-width: 400px;
+    }
   }
   &-card {
     display: flex;
@@ -66,7 +73,12 @@
   }
 }
 
-.regID{
+.items-column {
+  width: 140px;
+  line-height: 16px;
+}
+
+.regID {
   margin-top: 10px;
 }
 .iconCardHome {
@@ -137,8 +149,10 @@
 
 .flexbox {
   display: flex;
+  align-items: baseline;
   gap: 5px;
-  align-self: stretch;
+  margin-bottom: 10px;
+  margin-top: 5px;
 }
 
 .flex-width {

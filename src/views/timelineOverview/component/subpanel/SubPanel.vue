@@ -4,12 +4,13 @@
       class="tab-with-icon"
       style="text-transform: capitalize !important"
       value="one"
+      id="activityGray"
     >
       Activity</v-tab
     >
     <v-tab class="tab-with-icon" style="text-transform: capitalize !important">
       <span class="icon-text-wrapper">
-        <img class="tab-icon" src="@/assets/image/email.svg" alt="" /> Email
+        <img class="tab-icon" src="@/assets/image/email.svg" alt="" /> Emails
       </span>
     </v-tab>
     <v-tab class="tab-with-icon" style="text-transform: capitalize !important">

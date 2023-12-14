@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <p v-if="loading">loading</p>
     <div>
       <div class="home-panel">
         <div
@@ -58,10 +57,12 @@
 import { mapActions, mapGetters } from "vuex";
 import Colapse from "../views/collapse/Colapse.vue";
 import Content from "../views/content/Content.vue";
+import Loading from "../components/loading/Loading.vue";
 export default {
   components: {
     Colapse,
     Content,
+    Loading,
   },
   mounted() {
     this.getMock();

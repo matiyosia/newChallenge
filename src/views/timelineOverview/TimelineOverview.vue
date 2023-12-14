@@ -17,7 +17,7 @@
         <v-select
           class="select-primary"
           placeholder="Year"
-          label="Yaer"
+          label="Year"
           v-model="selectedYear"
           :items="years"
           variant="outlined"
@@ -40,6 +40,8 @@
           class="placeholder"
           single-line
           hide-details
+          v-model="search"
+          v-on:change="filterSearch"
         ></v-text-field>
       </div>
     </div>
@@ -47,7 +49,7 @@
       <v-timeline side="end">
         <v-timeline-item
           v-for="(item, i) in filteredItems"
-          style="font-size: 11px;"
+          style="font-size: 11px"
           :key="i"
           :dot-color="item.color"
           :icon="item.icon"
@@ -87,6 +89,8 @@ export default {
     tab: null,
     selectedYear: null,
     selectedUSer: null,
+    search: null,
+    filterSearch: [],
     name: [],
     years: [],
     items: [
@@ -188,19 +192,34 @@ export default {
     });
     this.name = names;
   },
+  methods: {
+
+  },
   computed: {
     filteredItems() {
+      let filtered = this.items;
+
       if (this.selectedYear) {
-        return this.items.filter((item) =>
+        filtered = filtered.filter((item) =>
           item.date.includes(this.selectedYear)
         );
       } else if (this.selectedUSer) {
-        return this.items.filter((item) =>
+        filtered = filtered.filter((item) =>
           item.name.includes(this.selectedUSer)
         );
-      } else {
-        return this.items;
+      } else if (this.search) {
+        filtered = filtered.filter((item) => {
+          return (
+            item.subTitle.toLowerCase().includes(this.search.toLowerCase()) ||
+            (item.text &&
+              item.text.toLowerCase().includes(this.search.toLowerCase())) ||
+            (item.name &&
+              item.name.toLowerCase().includes(this.search.toLowerCase()))
+          );
+        });
       }
+
+      return filtered;
     },
   },
 };
