@@ -76,3 +76,18 @@
   color: #babfc7;
   margin-left: -0.5rem;
 }
+
+.homeCardW {
+  width: 340px;
+  background-color: white;
+  border-radius: 6px;
+  margin-right: 0.4rem;
+}
+@include device-sm("max") {
+  .iconNav {
+    display: none;
+  }
+  .homeCardW {
+    width: 100%;
+  }
+}

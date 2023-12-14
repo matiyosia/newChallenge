@@ -49,6 +49,9 @@
     color: $violet;
     @include font-size(14, 17, 700);
   }
+  @include device-sm("max") {
+   width: 100%;
+  }
 }
 
 .tbasTineline {
@@ -66,13 +69,13 @@
   padding: 10px;
   background: #f0f0f0;
   width: 100% !important;
-  min-width: 990px;
+  min-width: auto;
 }
 .border-none-tabs {
   border: none;
 }
 
-.v-timeline-item__body{
+.v-timeline-item__body {
   width: 100%;
 }
 
@@ -110,8 +113,9 @@
 
 .v-timeline--vertical.v-timeline {
   row-gap: 9px !important;
-  margin-left: -10rem !important;
   margin: 5px;
+  margin-left: 0 !important;
+  grid-template-columns: 0 60px 1fr !important;
 }
 
 .v-timeline > .v-timeline-item:first-child .v-timeline-divider__before {

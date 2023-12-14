@@ -6,7 +6,7 @@
       multiple
       v-for="(val, i) in data?.sidebar"
       :key="i"
-      style="width: 340px"
+      class="colapseW"
     >
       <v-expansion-panel>
         <v-expansion-panel-title class="colapse-title">
@@ -69,7 +69,7 @@
       multiple
       v-for="(val, i) in data?.sidebar"
       :key="i"
-      style="width: 340px"
+      class="colapseW"
     >
       <v-expansion-panel>
         <v-expansion-panel-title class="colapse-title"
@@ -137,7 +137,7 @@
       multiple
       v-for="(val, i) in data?.sidebar"
       :key="i"
-      style="width: 340px"
+      class="colapseW"
     >
       <v-expansion-panel>
         <v-expansion-panel-title class="colapse-title"
