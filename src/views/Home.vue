@@ -2,16 +2,7 @@
   <div class="home">
     <div>
       <div class="home-panel">
-        <div
-          v-for="(item, i) in data.sidebar"
-          :key="i"
-          style="
-            width: 340px;
-            background-color: white;
-            border-radius: 6px;
-            margin-right: 0.4rem;
-          "
-        >
+        <div v-for="(item, i) in data.sidebar" :key="i" class="homeCardW">
           <div class="home-card">
             <div>
               <img src="@/assets/image/iconUser.svg" alt="" />
