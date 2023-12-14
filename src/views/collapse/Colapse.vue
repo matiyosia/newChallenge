@@ -19,18 +19,18 @@
         <v-expansion-panel-text v-for="(item, j) in val.student" :key="j">
           <ul class="colapse-list">
             <li>Periodo: {{ item.period }}</li>
-            <li>Estado: {{ item.status }}</li>
+            <li>Status: {{ item.status }}</li>
             <li>Colegio: {{ item.school }}</li>
             <li>Mod Admision: {{ item.admission }}</li>
             <li>Segmento: {{ item.segment }}</li>
             <li>Segmento detalle: {{ item.segment }}</li>
             <h2 class="risk-detail">Detalle Riesgo de Ingreso:</h2>
-            <hr />
+            <div class="hr-btn"></div>
             <li>
               <div class="flexbox">
                 <div><p class="flex-width">Matematica:</p></div>
                 <div>
-                  <p>{{ item.matematica }}</p>
+                  <p class="items-column">{{ item.matematica }}</p>
                 </div>
               </div>
             </li>
@@ -38,7 +38,7 @@
               <div class="flexbox">
                 <div><p class="flex-width">Quimica:</p></div>
                 <div>
-                  <p>{{ item.quimica }}</p>
+                  <p class="items-column">{{ item.quimica }}</p>
                 </div>
               </div>
             </li>
@@ -46,7 +46,7 @@
               <div class="flexbox">
                 <div><p class="flex-width">Programación:</p></div>
                 <div>
-                  <p>{{ item.programacion }}</p>
+                  <p class="items-column">{{ item.programacion }}</p>
                 </div>
               </div>
             </li>
@@ -54,7 +54,7 @@
               <div class="flexbox">
                 <div><p class="flex-width">Comunicación:</p></div>
                 <div>
-                  <p>{{ item.comunicacion }}</p>
+                  <p class="items-column">{{ item.comunicacion }}</p>
                 </div>
               </div>
             </li>
@@ -90,7 +90,7 @@
 
             <li class="colapse-email">
               Email:
-              <hr />
+              <div class="hr-btn"></div>
               <div>
                 <span @click="dialog = true">
                   <v-icon :icon="item.editEmail"></v-icon>
@@ -146,12 +146,12 @@
             src="@/assets/image/colapse.svg"
             alt=""
           />
-          Carrera</v-expansion-panel-title
+          Career Details</v-expansion-panel-title
         >
         <v-expansion-panel-text v-for="(item, j) in val.career" :key="j">
           <ul class="colapse-list">
             <li>
-              Carrera: {{ item.name }}
+              {{ item.name }}:
               <v-select
                 id="selectHome"
                 label="Seleciona una opcion"
@@ -160,15 +160,15 @@
               />
             </li>
             <br />
-            <li class="flexColapse title">Carrera ID:</li>
+            <li class="flexColapse title">Career ID:</li>
             <li class="flexColapse">{{ item.careerId }}</li>
-            <li class="flexColapse title">Tipo:</li>
+            <li class="flexColapse title">Type:</li>
             <li class="flexColapse">{{ item.type }}</li>
-            <li class="flexColapse title">Modalidad:</li>
+            <li class="flexColapse title">Modality:</li>
             <li class="flexColapse">{{ item.modality }}</li>
             <li class="flexColapse title">Status:</li>
             <li class="flexColapse">{{ item.status }}</li>
-            <li class="flexColapse title">Estudiante ID:</li>
+            <li class="flexColapse title">Student ID:</li>
             <li class="flexColapse">{{ item.studentId }}</li>
             <li class="flexColapse title">Cohorte:</li>
             <li class="flexColapse">{{ item.cohort }}</li>

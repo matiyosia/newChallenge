@@ -4,10 +4,11 @@
     id="siderLayaput"
     expand-on-hover
     rail
-    :v-show="drawerOpen"
-    style="border: none !important; background-color: white"
+    class="navigator"
+    @mouseout="estado = false"
+    @mouseover="estado = true"
   >
-    <div>
+    <div class="drawerFlex">
       <RouterLink to="/">
         <v-list class="navIconHome">
           <v-list-item>
@@ -18,10 +19,11 @@
           </v-list-item>
         </v-list>
       </RouterLink>
+
       <img
-        v-if="isDrawerHovering()"
+        v-if="!estado"
         style="
-          margin-left: 20px;
+          margin-left: 10px;
           padding-top: 0px;
           padding-bottom: 0px;
           width: 15px;
@@ -145,6 +147,7 @@ export default {
       isExpanded: false,
       isExpandedSchool: false,
       drawerOpen: false,
+      estado: false,
     };
   },
   mounted() {
@@ -160,21 +163,6 @@ export default {
     toggleDrawer() {
       this.drawerOpen = !this.drawerOpen;
     },
-    isDrawerHovering() {
-      const drawer = document.querySelector(
-        ".v-navigation-drawer--is-hovering"
-      );
-      return drawer !== null;
-    },
-  },
-  watch: {
-    drawerStateChanged(newVal, oldVal) {
-      if (newVal !== oldVal && newVal === true) {
-        // Aquí puedes realizar acciones cuando el drawer se abra
-        console.log("El drawer se ha abierto automáticamente");
-        // Realizar otras acciones necesarias cuando el drawer se abra automáticamente
-      }
-    },
   },
 };
 </script>
@@ -189,7 +177,10 @@ export default {
     color: #fff;
   }
 }
-
+.navigator {
+  border: none !important;
+  background-color: white;
+}
 .flexNav {
   display: flex;
   align-items: center;
@@ -219,9 +210,10 @@ export default {
   fill: var(--menu-menu-button-bg-default, #fff);
   filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.05));
   color: #6e6b7b;
-  margin-left: -0.4rem;
+  margin-left: -5px;
   z-index: 99999;
   position: relative;
+  padding-left: 5px;
   &:focus {
     color: #fff !important;
   }
@@ -245,9 +237,8 @@ export default {
 }
 
 .navIconHome {
-  padding: 0px;
+  padding: 3px 5px;
   border-radius: 6px;
-  margin: 5px;
   background: #4436fd !important;
   margin-bottom: 20px !important;
 }
@@ -257,16 +248,19 @@ export default {
   color: #fff !important;
 }
 .focused {
-  // box-shadow: 4px 0px 15px 0px rgba(0, 0, 0, 0.11);
-  padding: 0px;
+  background-color: var(--menu-menu-bg, #fff) !important;
+  color: var(--menu-menu-button-text-default, #6e6b7b) !important;
+  font-feature-settings: "clig" off, "liga" off !important;
+  fill: var(--menu-menu-button-bg-default, #fff) !important;
+  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.05)) !important;
+  padding: 3px 5px;
   border-radius: 6px;
   margin-top: 10px !important;
-  margin: 5px;
   &:focus {
     background-color: #4436fd !important;
     color: white !important;
     border-radius: 6px;
-    margin: 5px;
+    padding: 3px 5px;
     p {
       color: white !important;
     }

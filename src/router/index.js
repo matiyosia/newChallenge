@@ -1,4 +1,3 @@
-// Composables
 import { ROUTES } from '@/config/constant'
 import { createRouter, createWebHistory } from 'vue-router'
 

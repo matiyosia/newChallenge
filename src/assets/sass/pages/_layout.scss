@@ -15,6 +15,7 @@
 #siderLayaput {
   .v-navigation-drawer__content {
     background-color: #ffffff;
+    padding: 10px;
   }
   .v-list-item--active {
     background-color: $primary !important;
@@ -22,7 +23,8 @@
   }
 
   .v-list-item--density-default:not(.v-list-item--nav).v-list-item--one-line {
-    padding-inline: 12px !important;
+    padding-inline: 0px !important;
+    margin: -5px !important;
   }
 }
 
@@ -33,7 +35,7 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #babfc7;
-  margin-left: 0.6rem;
+  margin-left: 0.1rem;
 }
 
 .navIconHome {

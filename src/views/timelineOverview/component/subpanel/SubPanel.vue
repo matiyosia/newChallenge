@@ -1,15 +1,17 @@
 <template>
-  <v-tabs v-model="tab" style="border: none" class="tabs-with-shadow">
+  <v-tabs v-model="tab" style="border: none;width: 346px !important;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05) !important;" class="tabs-with-shadow">
     <v-tab
       class="tab-with-icon"
       style="text-transform: capitalize !important"
       value="one"
+      id="activityGray"
     >
       Activity</v-tab
     >
     <v-tab class="tab-with-icon" style="text-transform: capitalize !important">
       <span class="icon-text-wrapper">
-        <img class="tab-icon" src="@/assets/image/email.svg" alt="" /> Email
+        <img class="tab-icon" src="@/assets/image/email.svg" alt="" /> Emails
       </span>
     </v-tab>
     <v-tab class="tab-with-icon" style="text-transform: capitalize !important">

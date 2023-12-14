@@ -17,7 +17,7 @@
         <v-select
           class="select-primary"
           placeholder="Year"
-          label="Yaer"
+          label="Year"
           v-model="selectedYear"
           :items="years"
           variant="outlined"
@@ -32,7 +32,7 @@
         ></v-select>
 
         <v-text-field
-          style="width: 243px; height: 38px; box-shadow: none; color: red;"
+          style="width: 243px; height: 38px; box-shadow: none"
           density="compact"
           variant="outlined"
           label="Search.."
@@ -40,13 +40,16 @@
           class="placeholder"
           single-line
           hide-details
+          v-model="search"
+          v-on:change="filterSearch"
         ></v-text-field>
       </div>
     </div>
     <div class="timelineContainer">
-      <v-timeline side="end">
+      <v-timeline side="end" class="timelimeCustom">
         <v-timeline-item
           v-for="(item, i) in filteredItems"
+          style="font-size: 11px width: 100%;"
           :key="i"
           :dot-color="item.color"
           :icon="item.icon"
@@ -54,7 +57,7 @@
         >
           <p class="timeline-title">{{ item.title }}</p>
           <div class="cardTimeline">
-            <v-card-text style="background: #f0f0f0" class="text--primary">
+            <v-card-text style="background: #f0f0f0; width: 100%;" class="text--primary">
               <div>
                 <div class="date">
                   <div>
@@ -86,6 +89,8 @@ export default {
     tab: null,
     selectedYear: null,
     selectedUSer: null,
+    search: null,
+    filterSearch: [],
     name: [],
     years: [],
     items: [
@@ -98,14 +103,14 @@ export default {
         subTitle: "by Gerardo Moyano",
         text: "Upselling email sent. ",
         name: "Wiew Email",
-        date: "Sep-23,2023-13:32",
+        date: "Sep 23, 2023 - 13:32",
       },
       {
         id: 2,
         color: "#7367F0",
         icon: "mdi-message-text",
         text: "Whatsapp chat meeting.",
-        date: "Ago-23,2023-13:32",
+        date: "Ago 23, 2023 - 13:32",
         titleColor: "Chat Meeting",
         subTitle: "by Prof. Jean Charleton",
       },
@@ -116,7 +121,7 @@ export default {
         title: "Agust 2023",
         subTitle: "by Danielle Munchen Schollengberg",
         text: "For: “Career Planning and Development” Assignment Name: “Quiz 01”, Delivered ON TIME. Grade: TBD",
-        date: "Nov-23,2023-13:32",
+        date: "Nov 23, 2023 - 13:32",
         titleColor: "LMS Assignment Delivered",
       },
       {
@@ -124,7 +129,7 @@ export default {
         color: "#7367F0",
         icon: "mdi-phone",
         text: "Direct Call made to +52 55 22126164 Call Duration: 0 mins. 10 sec.",
-        date: "Sep-23,2023-13:32",
+        date: "Sep 23, 2023 - 13:32",
         subTitle: "from Gerardo Moyano",
         titleColor: "Call",
       },
@@ -132,7 +137,7 @@ export default {
         id: 5,
         color: "#7367F0",
         text: "Multiple Problems, Injuried, Check, Late",
-        date: "Sep-23,2023-13:32",
+        date: "Sep 23, 2023 - 13:32",
         titleColor: "Tag Added",
         subTitle:
           "from Career Planning and Development,by Prof. Jean Charleton",
@@ -141,7 +146,7 @@ export default {
         id: 6,
         color: "#7367F0",
         text: "Inactive, Control, Schollarship",
-        date: "Sep-23,2023-13:32",
+        date: "Sep 23, 2023 - 13:32",
         titleColor: "Tag Added",
         subTitle: "by Gerardo Moyano",
       },
@@ -153,17 +158,26 @@ export default {
         subTitle: "by Prof. Jean Charleton",
         text: "Check email sent.",
         name: "Wiew Email",
-        date: "Sep-23,2023-13:32",
+        date: "Sep 23, 2023 - 13:32",
       },
       {
         id: 8,
         color: "#7367F0",
         icon: "mdi-phone",
         title: "July 2023",
-        subTitle: "by prof. Jean Chaleton",
-        name: "tres",
-        text: 'For:"Career Plannig and Developmen" Assignment Name:"Quiz 01",Delivered ON TIME. Grade :TBD',
-        date: "Sep-23,2023-13:32",
+        titleColor: "call",
+        subTitle: "from Gerardo Moyano",
+        text: "Direct Call made to +52 55 22126164 Call Duration: 1 mins. 22 sec.",
+        date: "Jul 12, 2023 - 1:45pm",
+      },
+      {
+        id: 9,
+        color: "#7367F0",
+        icon: "mdi-phone",
+        titleColor: "call",
+        subTitle: "from Gerardo Moyano",
+        text: "Direct Call made to +52 55 22126164 Call Duration: 1 mins. 22 sec.",
+        date: "Jul 12, 2023 - 1:45pm",
       },
     ],
   }),
@@ -178,19 +192,34 @@ export default {
     });
     this.name = names;
   },
+  methods: {
+
+  },
   computed: {
     filteredItems() {
+      let filtered = this.items;
+
       if (this.selectedYear) {
-        return this.items.filter((item) =>
+        filtered = filtered.filter((item) =>
           item.date.includes(this.selectedYear)
         );
       } else if (this.selectedUSer) {
-        return this.items.filter((item) =>
+        filtered = filtered.filter((item) =>
           item.name.includes(this.selectedUSer)
         );
-      } else {
-        return this.items;
+      } else if (this.search) {
+        filtered = filtered.filter((item) => {
+          return (
+            item.subTitle.toLowerCase().includes(this.search.toLowerCase()) ||
+            (item.text &&
+              item.text.toLowerCase().includes(this.search.toLowerCase())) ||
+            (item.name &&
+              item.name.toLowerCase().includes(this.search.toLowerCase()))
+          );
+        });
       }
+
+      return filtered;
     },
   },
 };
