@@ -65,17 +65,21 @@
   border-radius: 4px;
   padding: 10px;
   background: #f0f0f0;
-  width: 1125px;
+  width: 100% !important;
   min-width: 990px;
 }
 .border-none-tabs {
   border: none;
 }
 
+.v-timeline-item__body{
+  width: 100%;
+}
+
 .timelineContainer {
-  display: flex;
-  justify-content: flex-start;
-  margin-left: -18px;
+  // display: flex;
+  // justify-content: flex-start;
+  // margin-left: -18px;
   overflow-y: scroll;
   height: 385px;
   margin: 10px;
@@ -106,7 +110,8 @@
 
 .v-timeline--vertical.v-timeline {
   row-gap: 9px !important;
-  margin-left: -1rem;
+  margin-left: -10rem !important;
+  margin: 5px;
 }
 
 .v-timeline > .v-timeline-item:first-child .v-timeline-divider__before {

@@ -4,13 +4,16 @@
 
   .v-slide-group__container {
     background-color: $gray-50;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.010) !important;
   }
   .v-tab__slider {
     border-bottom: 3px solid #7367f0;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.010) !important;
   }
   .v-slide-group-item--active {
     color: $gray-200;
   }
+ 
   .v-card {
     border: none !important;
   }
@@ -37,7 +40,9 @@
     border-bottom: 2px solid #dddddd !important;
   }
 }
-
+// .timelimeCustom{
+ 
+// }
 .content-card {
   display: flex;
   gap: 15px;
