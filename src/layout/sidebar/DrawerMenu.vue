@@ -66,13 +66,17 @@
           <v-list-item-title class="flexbox-nav">
             <span class="material-icons"> analytics </span>
             <p class="paragrhp-nav flexNav">
-              Risk Detector <span class="material-icons">expand_more</span>
+              Risk Detector
+              <span v-if="isExpanded" class="material-symbols-outlined">
+                expand_less
+              </span>
+              <span v-else class="material-symbols-outlined">expand_more</span>
             </p>
           </v-list-item-title>
         </v-list-item>
       </v-list>
 
-      <div v-if="isExpanded">
+      <div v-if="isExpanded" :class="{ none: !estado }">
         <ul class="ulNav">
           <li class="list-nav">
             <span class="material-icons circle"> circle </span> My Reports
@@ -91,12 +95,18 @@
           <v-list-item-title class="flexbox-nav">
             <span class="material-icons"> school </span>
             <p class="paragrhp-nav flexNavs">
-              Academic Offer <span class="material-icons">expand_more</span>
+              Academic Offer
+              <span v-if="isExpandedSchool" class="material-symbols-outlined">
+                expand_less
+              </span>
+              <span v-else class="material-symbols-outlined expandR"
+                >expand_more</span
+              >
             </p>
           </v-list-item-title>
         </v-list-item>
       </v-list>
-      <div v-if="isExpandedSchool">
+      <div v-if="isExpandedSchool" :class="{ none: !estado }">
         <ul class="ulNav">
           <li class="list-nav">
             <span class="material-icons circle"> circle </span> My Reports
@@ -148,10 +158,8 @@ export default {
       isExpandedSchool: false,
       drawerOpen: false,
       estado: false,
+      visibility: null,
     };
-  },
-  mounted() {
-    this.toggleDrawer();
   },
   methods: {
     handleExpanded() {
@@ -168,6 +176,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.expandR {
+  margin-right: 4rem;
+}
+.none {
+  display: none;
+}
 .textDrawerFine {
   font-size: 15px;
   font-weight: 500;
@@ -196,11 +210,11 @@ export default {
   display: flex;
   flex-direction: column;
   margin-left: 1.5rem;
-  gap: 15px;
+  gap: 20px;
   margin-top: 20px;
   cursor: pointer;
   .circle {
-    font-size: 14px;
+    font-size: 12px;
   }
   .list-nav {
     color: #6e6b7b;
@@ -210,10 +224,10 @@ export default {
   fill: var(--menu-menu-button-bg-default, #fff);
   filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.05));
   color: #6e6b7b;
-  margin-left: -5px;
+  margin-left: -8px;
   z-index: 99999;
   position: relative;
-  padding-left: 5px;
+  padding-left: 8px;
   &:focus {
     color: #fff !important;
   }
@@ -221,9 +235,10 @@ export default {
 .flexbox-nav {
   display: flex;
   align-items: center;
-  gap: 9px;
+  justify-content: space-between;
+  gap: 10px;
   cursor: pointer;
-  padding: 0.3rem;
+  padding: 5px;
   border-radius: 6px 5px 5px;
 }
 

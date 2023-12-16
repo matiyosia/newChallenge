@@ -1,4 +1,10 @@
 <template>
+  <Alert
+    v-if="showAlert"
+    type="error"
+    title="Invalid email"
+    text="wrong email type"
+  />
   <div class="colapse">
     <v-expansion-panels
       v-model="panel"
@@ -104,10 +110,18 @@
                         @change="handleEditEmail(item.email)"
                         label="Email"
                         required
+                        variant="outlined"
+                        type="email"
+                        hint="Email Required"
                       ></v-text-field>
                     </v-card-text>
                     <v-card-actions>
-                      <v-btn @click="saveEmail" color="primary" block>
+                      <v-btn
+                        :disabled="editEmail === '' ? true : false"
+                        @click="saveEmail"
+                        color="primary"
+                        block
+                      >
                         Editar</v-btn
                       >
                     </v-card-actions>
@@ -187,7 +201,11 @@
 </template>
 
 <script>
+import Alert from "../../components/Alert/Alert.vue";
 export default {
+  components: {
+    Alert,
+  },
   props: {
     data: {
       type: Object,
@@ -202,6 +220,7 @@ export default {
       dialog: null,
       editEmail: "",
       email: "danielle_munchen@gmail.com",
+      showAlert: false,
     };
   },
   mounted() {
@@ -212,9 +231,17 @@ export default {
       this.email = item;
     },
     saveEmail() {
-      this.email = this.editEmail;
-      this.dialog = false;
-      this.editEmail = "";
+      const emailRegex = /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/;
+      if (emailRegex.test(this.editEmail)) {
+        this.email = this.editEmail;
+        this.dialog = false;
+        this.editEmail = "";
+      } else {
+        this.showAlert = true;
+        setTimeout(() => {
+          this.showAlert = false;
+        }, 3000);
+      }
     },
   },
 };
