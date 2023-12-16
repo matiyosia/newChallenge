@@ -49,7 +49,7 @@
       <v-timeline side="end" class="timelimeCustom">
         <v-timeline-item
           v-for="(item, i) in filteredItems"
-          style="font-size: 11px width: 100%;"
+          style="font-size: 0.7rem; width: 100%;"
           :key="i"
           :dot-color="item.color"
           :icon="item.icon"
@@ -57,7 +57,10 @@
         >
           <p class="timeline-title">{{ item.title }}</p>
           <div class="cardTimeline">
-            <v-card-text style="background: #f0f0f0; width: 100%;" class="text--primary">
+            <v-card-text
+              style="background: #f0f0f0; width: 100%"
+              class="text--primary"
+            >
               <div>
                 <div class="date">
                   <div>
@@ -192,9 +195,7 @@ export default {
     });
     this.name = names;
   },
-  methods: {
-
-  },
+  methods: {},
   computed: {
     filteredItems() {
       let filtered = this.items;
