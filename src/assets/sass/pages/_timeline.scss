@@ -80,12 +80,8 @@
 }
 
 .timelineContainer {
-  // display: flex;
-  // justify-content: flex-start;
-  // margin-left: -18px;
   overflow-y: scroll;
   height: 385px;
-  margin: 10px;
 }
 .timeline-title {
   color: $violet;
@@ -174,4 +170,11 @@
 .v-timeline-divider__dot--size-small .v-timeline-divider__inner-dot {
   height: calc(100% - 6px) !important;
   width: calc(100% - 6px) !important;
+}
+
+.v-timeline--vertical .v-timeline-divider__before{
+  top:3px !important;
+}
+.v-timeline--vertical.v-timeline.v-timeline--side-end .v-timeline-item .v-timeline-item__body{
+  padding-inline-start:0px !important;
 }
