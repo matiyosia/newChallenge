@@ -268,7 +268,7 @@ export default {
   font-feature-settings: "clig" off, "liga" off !important;
   fill: var(--menu-menu-button-bg-default, #fff) !important;
   filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.05)) !important;
-  padding: 3px 5px;
+  padding: 3px 5px 0px;
   border-radius: 6px;
   margin-top: 10px !important;
   &:focus {

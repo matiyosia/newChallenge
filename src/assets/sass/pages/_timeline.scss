@@ -82,6 +82,8 @@
 .timelineContainer {
   overflow-y: scroll;
   height: 385px;
+  margin: 10px;
+  margin-left: -0.2rem;
 }
 .timeline-title {
   color: $violet;

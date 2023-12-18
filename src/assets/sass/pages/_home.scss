@@ -1,7 +1,7 @@
 .home {
   display: flex;
   gap: 20px;
-  @include device-lg("max") {
+  @include device-md("max") {
     flex-direction: column;
   }
   &-panel {
@@ -162,4 +162,10 @@
 
 .flex-width {
   width: 98px;
+}
+
+@media screen and (max-width: "800px") {
+  .home {
+    flex-direction: column;
+  }
 }
