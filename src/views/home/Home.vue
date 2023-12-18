@@ -46,9 +46,9 @@
 
 <script>
 import { mapActions, mapGetters } from "vuex";
-import Colapse from "../views/collapse/Colapse.vue";
-import Content from "../views/content/Content.vue";
-import Loading from "../components/loading/Loading.vue";
+import Colapse from "../collapse/Colapse.vue";
+import Content from "../content/Content.vue";
+import Loading from "../../components/loading/Loading.vue";
 export default {
   components: {
     Colapse,
