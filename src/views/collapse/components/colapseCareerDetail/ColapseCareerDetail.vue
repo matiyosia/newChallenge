@@ -21,7 +21,7 @@
           <li>
             {{ item.name }}:
             <v-select
-              id="selectHome"
+              class="selectHome"
               label="Seleciona una opcion"
               :items="['Software Developer', 'Testing']"
               variant="outlined"

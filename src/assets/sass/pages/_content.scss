@@ -56,6 +56,10 @@
   }
 }
 
+.v-select .v-select__selection-text {
+  margin-top: -11px !important;
+}
+
 @media screen and (max-width: "1389px") {
   .custom-card {
     flex-basis: calc(50% - 15px);
