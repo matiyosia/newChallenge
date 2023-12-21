@@ -21,7 +21,7 @@
       </RouterLink>
 
       <img
-        v-if="!estado"
+        :class="{ none: estado }"
         style="
           margin-left: 10px;
           padding-top: 0px;
@@ -31,7 +31,7 @@
         src="@/assets/image/carduser/more.svg"
         alt="more"
       />
-      <p v-else class="siderReport">Reports</p>
+      <p :class="{ none: !estado }" class="siderReport">Reports</p>
 
       <RouterLink to="/setting-profile">
         <v-list class="focused">
