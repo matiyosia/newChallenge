@@ -235,7 +235,6 @@ export default {
 .flexbox-nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 10px;
   cursor: pointer;
   padding: 5px;
