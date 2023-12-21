@@ -88,6 +88,7 @@
 .timeline-title {
   color: $violet;
   @include font-size(12, 21, 700);
+  margin-left: 9px;
 }
 
 .date {

@@ -21,7 +21,7 @@
       </RouterLink>
 
       <img
-        v-if="!estado"
+        :class="{ none: estado }"
         style="
           margin-left: 10px;
           padding-top: 0px;
@@ -31,7 +31,7 @@
         src="@/assets/image/carduser/more.svg"
         alt="more"
       />
-      <p v-else class="siderReport">Reports</p>
+      <p :class="{ none: !estado }" class="siderReport">Reports</p>
 
       <RouterLink to="/setting-profile">
         <v-list class="focused">
@@ -286,6 +286,7 @@ export default {
   &:hover {
     background: #f8f8f8 !important;
     border-radius: 6px !important;
+    filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.05)) !important;
     cursor: pointer !important;
     color: #6e6b7b;
     p {

@@ -41,7 +41,6 @@
           single-line
           hide-details
           v-model="search"
-          v-on:change="filterSearch"
         ></v-text-field>
       </div>
     </div>
