@@ -286,6 +286,7 @@ export default {
   &:hover {
     background: #f8f8f8 !important;
     border-radius: 6px !important;
+    filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.05)) !important;
     cursor: pointer !important;
     color: #6e6b7b;
     p {
